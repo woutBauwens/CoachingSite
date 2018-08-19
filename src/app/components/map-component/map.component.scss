@@ -1,0 +1,24 @@
+agm-map {
+  height: 100%;
+  width: 40vw;
+  display: block;
+}
+
+agm-marker {
+  color: red;
+}
+
+ul {
+  display: block;
+  float: right;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+
+
+  li {
+    padding: 20px;
+    display: block;
+  }
+}

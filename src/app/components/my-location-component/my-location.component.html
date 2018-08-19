@@ -1,0 +1,5 @@
+<div>
+    <input type="text" [(ngModel)]="location" [value]="getLocation()" #mylocation placeholder="change my location"
+           (keyup.enter)="updateLocation()">
+    <button (click)="updateLocation()">Zoek</button>
+</div>

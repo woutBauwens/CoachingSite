@@ -1,0 +1,57 @@
+<div class="container form-style-8" >
+  <h1>Calorieën verbrand</h1>
+  <h2>De berekeningen gebeuren voor {{ athlete.firstname }} {{athlete.lastname}}</h2>
+  <form (ngSubmit)="onSubmit()" novalidate #calorieForm="ngForm" >
+    <div class="form-group">
+      <label for="days">Berekenen voor </label>
+      <input type="text" class="form-control" id="days" required placeholder="Dagen"
+             [(ngModel)]="days" name="day" pattern="[0-9]*" #daysvalid="ngModel">
+      <div [hidden]="daysvalid.valid  || daysvalid.pristine"
+           class="alert alert-danger">
+           Je moet het aantal dagen ingeven als getal
+      </div>
+    </div>
+    <p></p>
+    <div class="form-group">
+      <label for="kayak">Afstand gekajakt </label>
+      <input type="text" class="form-control" id="kayak" placeholder="Kilometer"
+             [(ngModel)]="kayak" name="kayaking" pattern="[0-9]*" #kayakvalid="ngModel">
+      <div [hidden]="kayakvalid.valid  || kayakvalid.pristine"
+           class="alert alert-danger">
+           Je moet het aantal kilometer ingeven als getal
+      </div>
+    </div>
+       <div class="form-group">
+       <label for="climbing">Klimmen </label>
+       <input type="text" class="form-control" id="climbing" [(ngModel)]="climbing" name="climb" placeholder="Uren" pattern="[0-9]*" #climbvalid="ngModel">
+      <div [hidden]="climbvalid.valid  || climbvalid.pristine"
+           class="alert alert-danger">
+           Je moet het aantal uur ingeven als getal
+      </div>
+     </div>
+     <div class="form-group">
+       <label for="fitness">Fitness </label>
+       <input type="text" class="form-control" id="fitness" [(ngModel)]="fitness" name="fitnessing"placeholder="Uren" pattern="[0-9]*" #fitvalid="ngModel">
+      <div [hidden]="fitvalid.valid  || fitvalid.pristine"
+           class="alert alert-danger">
+           Je moet het aantal uur ingeven als getal
+      </div>
+     </div>
+     <div class="form-group">
+       <label for="walk">Afstand gewandeld </label>
+       <input type="text" class="form-control" id="walk" [(ngModel)]="walk" name="walking" placeholder="Kilometer" pattern="[0-9]*" #walkvalid="ngModel">
+      <div [hidden]="walkvalid.valid  || walkvalid.pristine"
+           class="alert alert-danger">
+           Je moet het aantal kilometer ingeven als getal
+      </div>
+     </div>
+    <div>
+      <button type="submit" (click)="calculate()" class="btn btn-success">Bereken</button>
+    </div>
+  </form>
+  
+  <div [hidden]="!submitted">
+    <h2>Je hebt {{result  | number:0}} calorieën verbrand</h2>
+    <h3>Je hebt gemiddeld {{result/days | number:0}} calorieën per dag verbrand</h3>
+  </div>
+</div>

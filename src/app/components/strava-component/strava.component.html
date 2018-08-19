@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Strava api</h1>
+  <p>
+    <img src={{athlete?.profile_medium}} >
+  </p>
+
+  <p>
+    Naam: {{ athlete?.firstname }} <br />
+  </p>
+
+  <p>
+
+    Vrienden:
+    {{athlete.friend_count}}
+    </p>
+
+    Route:
+    <ul *ngFor="let route of routes">
+      <li *ngIf="route.type == 1">
+        Fietsen
+      </li>
+      <li *ngIf="route.type == 2">
+        lopen
+      </li>
+      <li>{{route.name}}</li>
+      <li>Afstand: {{route.distance/1000 | number:0}} km</li>
+      <li>Hoogtemetes: {{route.elevation_gain | number:0}} m</li>
+      <li>{{route.description}}
+    </ul>
+</div>

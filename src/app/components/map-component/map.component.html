@@ -1,0 +1,13 @@
+<agm-map [latitude]="getLocation().lat" [longitude]="getLocation().lon" [zoom]="10">
+    <agm-marker *ngFor="let location of locationList.locations"
+                [latitude]="location.location.lat"
+                [longitude]="location.location.lon"
+                [iconUrl]="location.marker"
+                (markerClick)="selectLocation(location)"></agm-marker>
+</agm-map>
+
+<ul *ngFor="let location of locationList.locations">
+  Club: {{location.name}}
+  <li>Sport: {{location.disipline}}</li>
+  <li>Site: <a href={{location.site}} target="_blank">{{location.site}}</a></li>
+</ul>

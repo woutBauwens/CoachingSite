@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  hom-my-location {
+    height: 56px;
+  }
+
+  hom-map {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  hom-group-item {
+    height: 100px;
+  }
+}

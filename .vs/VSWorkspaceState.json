@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\spec",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\app-component",
+    "\\src\\app\\components\\home-component",
+    "\\src\\app\\components\\page-not-found-component",
+    "\\src\\app\\components\\search-component",
+    "\\src\\app\\services"
+  ],
+  "SelectedNode": "\\src\\app\\components\\map-component\\map.component.spec.ts",
+  "PreviewInSolutionExplorer": false
+}

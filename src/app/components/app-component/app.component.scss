@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .header {
+    height: 64px;
+    background: #2D2E2E;
+  }
+
+  .content {
+    display: flex;
+    height: 100%;
+    margin: 50px;
+  }
+
+  .navigation {
+    height: 64px;
+
+    mat-toolbar {
+      background: #2D2E2E;
+
+      .icon {
+        color: white;
+        padding: 0 14px;
+      }
+
+      .spacer {
+        margin-left: 50px;
+      }
+    }
+  }
+}
